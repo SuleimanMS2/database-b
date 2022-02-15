@@ -10,7 +10,7 @@ logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
 
-@bot.message_handlers(commands=["start"])
+@bot.message_handler(commands=["start"])
 def start(message):
     username = message.from_user.username
     bot.reply_to(message, f"Hello, {username}!")
